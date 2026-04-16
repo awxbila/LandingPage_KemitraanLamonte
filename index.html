@@ -782,28 +782,10 @@
         const intro = document.getElementById("introScreen");
         if (!intro) return;
 
-        const seenKey = "lamonte-intro-seen";
         const closeIntro = function () {
           intro.classList.add("is-hidden");
           document.body.classList.remove("has-intro");
-          try {
-            localStorage.setItem(seenKey, "1");
-          } catch (error) {
-            // no-op
-          }
         };
-
-        let alreadySeen = false;
-        try {
-          alreadySeen = localStorage.getItem(seenKey) === "1";
-        } catch (error) {
-          alreadySeen = false;
-        }
-
-        if (alreadySeen) {
-          intro.classList.add("is-hidden");
-          return;
-        }
 
         document.body.classList.add("has-intro");
 
