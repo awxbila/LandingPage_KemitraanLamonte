@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Paket Kemitraan Lamonte</title>
+    <meta
+      name="description"
+      content="Katalog paket kemitraan Lamonte untuk melihat pilihan paket kerja sama bisnis baju anak."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem("lamonte-theme");
+          const prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = savedTheme || (prefersDark ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/media-queries.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrapper">
+          <a class="brand" aria-label="Kembali ke beranda Lamonte">
+            <img src="assets/img/logo.png" alt="Lamonte" class="brand-logo" />
+          </a>
+
+          <div class="nav-actions">
+            <nav class="site-nav" aria-label="Navigasi utama katalog">
+              <a href="index.html#tentang">Home</a>
+              <a href="index.html#program">Module</a>
+              <a href="index.html#kemitraan">Kemitraan</a>
+              <a href="index.html#kontak">Contact</a>
+            </nav>
+
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Ganti ke mode gelap"
+            >
+              <img src="assets/img/sun.svg" alt="Ikon matahari" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="catalog-hero section-space">
+          <div class="container catalog-hero-grid">
+            <div class="catalog-hero-copy">
+              <p class="eyebrow">Katalog Kemitraan Lamonte</p>
+              <h1>
+                Jelajahi Paket Kemitraan yang Sesuai dengan Target Bisnismu
+              </h1>
+              <p class="catalog-lead">
+                Katalog ini menyajikan detail lengkap setiap paket kemitraan,
+                mulai dari kuantitas isi paket, kualitas bahan, hingga benefit
+                utama yang akan kamu dapatkan. Gunakan panduan ini untuk membuat
+                keputusan yang tepat sesuai dengan rencana bisnis dan target
+                pertumbuhan bisnismu.
+              </p>
+              <div class="catalog-actions">
+                <a href="#kontak" class="catalog-cta">Contact Us</a>
+                <a href="index.html#kemitraan" class="catalog-cta"
+                  >Kembali ke Kemitraan</a
+                >
+              </div>
+            </div>
+
+            <div class="catalog-panel">
+              <h2>Mengapa Lamonte?</h2>
+              <ul>
+                <li>
+                  Paket tersusun bertahap sesuai skala bisnis, dari starter
+                  hingga enterprise.
+                </li>
+                <li>
+                  Setiap paket dilengkapi alat dan materi siap pakai untuk ubah
+                  rencana menjadi aksi.
+                </li>
+                <li>
+                  Dukungan berkelanjutan memastikan perjalanan bisnis tidak
+                  berjalan sendirian.
+                </li>
+                <li>
+                  Transparansi penuh dalam struktur paket memudahkan
+                  perbandingan sebelum memilih.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="products-section section-space" id="products">
+          <div class="container">
+            <div class="products-topbar">
+              <h1>Packages (11)</h1>
+
+              <div class="products-controls" aria-label="Kontrol katalog">
+                <div class="products-view-toggle" aria-label="Tampilan katalog">
+                  <button
+                    class="products-view-btn is-active"
+                    type="button"
+                    data-view="grid"
+                    aria-label="Grid view"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="4" y="4" width="6" height="6" rx="1.2"></rect>
+                      <rect x="14" y="4" width="6" height="6" rx="1.2"></rect>
+                      <rect x="4" y="14" width="6" height="6" rx="1.2"></rect>
+                      <rect x="14" y="14" width="6" height="6" rx="1.2"></rect>
+                    </svg>
+                  </button>
+                  <button
+                    class="products-view-btn"
+                    type="button"
+                    data-view="list"
+                    aria-label="List view"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="4" y="5" width="3" height="3" rx="1"></rect>
+                      <rect x="4" y="10.5" width="3" height="3" rx="1"></rect>
+                      <rect x="4" y="16" width="3" height="3" rx="1"></rect>
+                      <path d="M10 6.5h10"></path>
+                      <path d="M10 12h10"></path>
+                      <path d="M10 17.5h10"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <label class="products-sort">
+                  <span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M6 7h12"></path>
+                      <path d="M9 12h9"></path>
+                      <path d="M12 17h6"></path>
+                    </svg>
+                    Sort by:
+                  </span>
+                  <select aria-label="Sort products" id="productsSort">
+                    <option value="relevance">Relevance</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="products-grid">
+              <article class="product-card">
+                <div class="product-media">
+                  <span class="product-badge-best"
+                    ><span aria-hidden="true">👍</span> Best Seller</span
+                  >
+                  <img
+                    src="assets/img/katalog%201.jpg"
+                    alt="Paket Ball Mega Premium"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Ball Mega Premium</h2>
+                  <p class="product-price">Rp 25.000.000</p>
+                  <p class="product-description">
+                    Untuk yang siap kuasai area dan bangun jaringan reseller.
+                  </p>
+                  <ul class="product-details">
+                    <li><strong>Kuantitas isi paket:</strong> 550 pcs.</li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> dominan premium, jahitan
+                      rapi, dan nyaman untuk dipakai harian.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> stok besar untuk cover area luas
+                      dan lebih enak bangun reseller turunan.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%202.jpg"
+                    alt="Paket Mini Murmer"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Mini Murmer</h2>
+                  <p class="product-price">Rp 3.550.000</p>
+                  <p class="product-description">
+                    Stok nyaman untuk sering upload dan sering closing.
+                  </p>
+                  <ul class="product-details">
+                    <li><strong>Kuantitas isi paket:</strong> 100 pcs.</li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> campuran lokal pilihan
+                      yang tetap rapi untuk konten harian.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> cocok untuk jualan online, promo
+                      rutin, dan mulai gandeng reseller kecil.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%203.jpg"
+                    alt="Paket Hemat Buka Usaha"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Hemat Buka Usaha</h2>
+                  <p class="product-price">Rp 5.500.000</p>
+                  <p class="product-description">
+                    Paket hemat buat mulai usaha lebih serius.
+                  </p>
+                  <ul class="product-details">
+                    <li><strong>Kuantitas isi paket:</strong> 125 pcs.</li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> grade menengah ke atas,
+                      nyaman dipakai dan aman untuk repeat order.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> cukup untuk etalase awal dan
+                      enak dipakai rekrut reseller aktif.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="assets/img/katalog%204.jpg" alt="Paket Buka Toko" />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Buka Toko</h2>
+                  <p class="product-price">Rp 12.500.000</p>
+                  <p class="product-description">
+                    Siap punya toko fisik dengan tampilan profesional.
+                  </p>
+                  <ul class="product-details">
+                    <li>
+                      <strong>Kuantitas isi paket:</strong> 300-350 pcs (free
+                      banner).
+                    </li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> kombinasi lokal dan
+                      premium dengan variasi ukuran lebih lengkap.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> cocok untuk buka kios/rumah,
+                      plus banner toko siap pasang.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="assets/img/katalog%205.jpg" alt="Paket Kombinasi" />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Kombinasi</h2>
+                  <p class="product-price">Rp 1.650.000</p>
+                  <p class="product-description">
+                    Untuk yang ingin varian ukuran dan model lebih banyak.
+                  </p>
+                  <ul class="product-details">
+                    <li>
+                      <strong>Kuantitas isi paket:</strong> 45 pcs (mix import
+                      lokal).
+                    </li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> mix bahan premium dan
+                      harian yang tetap layak foto katalog.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> nyaman untuk bundling dan cocok
+                      buat keluarga maupun online.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%206.jpg"
+                    alt="Paket Boom Laris Jualan"
+                  />
+                  <span class="product-badge-best"
+                    ><span aria-hidden="true">👍</span> Best Seller</span
+                  >
+                </div>
+                <div class="product-body">
+                  <h2>Paket Boom Laris Jualan</h2>
+                  <p class="product-price">Rp 1.800.000</p>
+                  <p class="product-description">
+                    Pas untuk yang sudah rutin dapat order.
+                  </p>
+                  <ul class="product-details">
+                    <li><strong>Kuantitas isi paket:</strong> 50 pcs.</li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> mayoritas model laris,
+                      bahan halus, dan warna aman untuk live sale.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> bantu percepat closing saat
+                      flash sale dan live karena modelnya cepat muter.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <span class="product-badge-best"
+                    ><span aria-hidden="true">👍</span> Best Seller</span
+                  >
+                  <img
+                    src="assets/img/katalog%201.jpg"
+                    alt="New Paket Eksklusif"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>New Paket Eksklusif</h2>
+                  <p class="product-price">Rp 2.250.000</p>
+                  <p class="product-description">
+                    Untuk segmen bunda yang cari look premium.
+                  </p>
+                  <ul class="product-details">
+                    <li><strong>Kuantitas isi paket:</strong> 65 pcs.</li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> bahan premium dengan
+                      detail rapi, cocok untuk foto close-up produk.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> bantu naikkan image toko lebih
+                      eksklusif dan estetik untuk konten.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%202.jpg"
+                    alt="Paket Sampel Murmer"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Sampel Murmer</h2>
+                  <p class="product-price">Rp 650.000</p>
+                  <p class="product-description">
+                    Untuk tes minat pasar tanpa takut stok numpuk.
+                  </p>
+                  <ul class="product-details">
+                    <li>
+                      <strong>Kuantitas isi paket:</strong> 25 pcs campur
+                      ukuran.
+                    </li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> kualitas harian yang
+                      tetap nyaman, pas untuk tes respon pasar.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> aman buat pemula, mudah dijual
+                      ke circle terdekat tanpa modal berat.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%203.jpg"
+                    alt="Paket Mix Sampel Murmer"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Mix Sampel Murmer</h2>
+                  <p class="product-price">Rp 850.000</p>
+                  <p class="product-description">
+                    Lebih banyak varian untuk lihat selera pasar.
+                  </p>
+                  <ul class="product-details">
+                    <li>
+                      <strong>Kuantitas isi paket:</strong> 30 pcs (mix import
+                      lokal).
+                    </li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> kombinasi bahan import
+                      dan lokal, kualitas visual lebih variatif.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> cocok untuk foto katalog dan uji
+                      produk mana yang paling cepat laku.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%204.jpg"
+                    alt="Paket Usaha Mix Fashion"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Usaha Mix Fashion</h2>
+                  <p class="product-price">Rp 1.000.000</p>
+                  <p class="product-description">
+                    Pas untuk kamu yang siap jualan rutin.
+                  </p>
+                  <ul class="product-details">
+                    <li>
+                      <strong>Kuantitas isi paket:</strong> 36 pcs (mix import
+                      lokal).
+                    </li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> bahan campuran yang aman
+                      untuk jual satuan maupun paket.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> enak buat mulai masuk
+                      marketplace dengan model yang sudah nyambung demand.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="assets/img/katalog%205.jpg"
+                    alt="Paket Super Trial"
+                  />
+                </div>
+                <div class="product-body">
+                  <h2>Paket Super Trial</h2>
+                  <p class="product-price">Rp 1.200.000</p>
+                  <p class="product-description">
+                    Ideal untuk tes market di IG, TikTok, dan WA.
+                  </p>
+                  <ul class="product-details">
+                    <li><strong>Kuantitas isi paket:</strong> 30 pcs.</li>
+                    <li>
+                      <strong>Kualitas bahan:</strong> bahan ringan dan
+                      fotogenik untuk kebutuhan konten harian.
+                    </li>
+                    <li>
+                      <strong>Benefit:</strong> support uji harga, respon pasar,
+                      dan gaya konten sebelum scale up stok.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="kontak">
+        <div class="container footer-grid">
+          <div class="footer-brand-col">
+            <a href="#" class="footer-brand" aria-label="Lamonte">
+              <img
+                src="assets/img/logo.png"
+                alt="Lamonte"
+                class="footer-logo"
+              />
+            </a>
+            <p class="footer-note">
+              Lamonte hadir bantu kamu bangun bisnis baju anak dengan sistem
+              yang jelas, siap jalan, dan mudah di-scale.
+            </p>
+            <div class="footer-social" aria-label="Sosial media Lamonte">
+              <a
+                href="https://www.instagram.com/lamonte.id?igsh=MTJzdmsxemk5ZDBhcw=="
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4.1"></circle>
+                  <circle cx="17.3" cy="6.7" r="1.2"></circle>
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@lamonteid?_r=1&_t=ZS-95atbMkt2iz"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 4v10.2a3.8 3.8 0 1 1-3.8-3.8"></path>
+                  <path d="M14 4c1 .9 2.1 1.6 3.5 1.7"></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/lamonte.shop/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M13.6 21v-7h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.5-1.5h1.6V5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.3v7h3.3z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://youtube.com/@lamonteid?si=znTRK1t9bm_3MJXs"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="YouTube"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6.5" width="18" height="11" rx="3.5"></rect>
+                  <path d="M10 9.5v5l4.5-2.5z"></path>
+                </svg>
+              </a>
+              <a
+                href="https://whatsapp.com/channel/0029VaFJuCaDuMRjl2aaVw2j"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1.2-3.2A8.5 8.5 0 1 1 20 11.5z"
+                  ></path>
+                  <path
+                    d="M9.4 8.8c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.4.3l.7 1.8c.1.2 0 .4-.1.5l-.5.6c-.1.1-.1.2 0 .4.2.5.7 1 1.2 1.3.5.3 1 .5 1.3.6.2.1.3.1.4 0l.7-.6c.1-.1.3-.1.5-.1l1.7.8c.2.1.3.2.3.4v.5c0 .3-.1.5-.4.7-.4.3-1 .5-1.7.4-.8-.1-1.8-.5-2.9-1.2-1.5-.9-2.5-2.1-2.9-3.4-.3-.8-.3-1.6.1-2.4z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-company-col">
+            <h3>Company</h3>
+            <ul class="footer-company-list">
+              <li>
+                Alamat: JQ5W+RH9, Mampang, Kec. Pancoran Mas, Kota Depok, Jawa
+                Barat 16433
+              </li>
+              <li>Telepon: +62 xxx-xxxx-xxxx</li>
+              <li>Email: business@lamonte.id</li>
+              <li>
+                Website:
+                <a href="https://lamonte.id/" target="_blank" rel="noreferrer"
+                  >lamonte.id</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-feedback-col">
+            <div class="feedback-card">
+              <h3>Beritahu kami tentang apa yang kamu pikirkan</h3>
+              <form
+                class="feedback-form"
+                id="feedbackForm"
+                data-wa-number="6281234567890"
+              >
+                <textarea
+                  id="feedbackMessage"
+                  name="message"
+                  rows="5"
+                  placeholder="Tulis saran, pertanyaan, atau kebutuhan kamu di sini..."
+                ></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <p>&copy; 2026 Kemitraan Lamonte. Seluruh hak cipta dilindungi.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const toggle = document.querySelector(".theme-toggle");
+        const icon = toggle ? toggle.querySelector("img") : null;
+        if (!toggle || !icon) return;
+
+        function applyTheme(theme) {
+          const isDark = theme === "dark";
+          document.documentElement.setAttribute(
+            "data-theme",
+            isDark ? "dark" : "light",
+          );
+          icon.src = isDark ? "assets/img/moon.svg" : "assets/img/sun.svg";
+          icon.alt = isDark ? "Ikon bulan" : "Ikon matahari";
+          toggle.setAttribute(
+            "aria-label",
+            isDark ? "Ganti ke mode terang" : "Ganti ke mode gelap",
+          );
+        }
+
+        const initialTheme =
+          document.documentElement.getAttribute("data-theme") || "light";
+        applyTheme(initialTheme);
+
+        toggle.addEventListener("click", function () {
+          const currentTheme =
+            document.documentElement.getAttribute("data-theme") || "light";
+          const nextTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(nextTheme);
+          try {
+            localStorage.setItem("lamonte-theme", nextTheme);
+          } catch (error) {
+            // no-op
+          }
+        });
+      })();
+
+      (function () {
+        const header = document.querySelector(".site-header");
+        if (!header) return;
+
+        function syncHeaderState() {
+          header.classList.toggle("is-scrolled", window.scrollY > 12);
+        }
+
+        window.addEventListener("scroll", syncHeaderState, { passive: true });
+        syncHeaderState();
+      })();
+
+      (function () {
+        const form = document.getElementById("feedbackForm");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const textarea = document.getElementById("feedbackMessage");
+          if (!textarea) return;
+
+          const message = textarea.value.trim();
+          if (!message) {
+            textarea.focus();
+            return;
+          }
+
+          const waNumber =
+            form.getAttribute("data-wa-number") || "6281234567890";
+          const text =
+            "Halo layanan Lamonte, saya ingin menyampaikan: " + message;
+          const url =
+            "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(text);
+          window.open(url, "_blank", "noopener");
+        });
+      })();
+
+      (function () {
+        const catalogHero = document.querySelector(".catalog-hero");
+        const catalogHeroCopy = document.querySelector(".catalog-hero-copy");
+        const catalogPanel = document.querySelector(".catalog-panel");
+
+        if (!catalogHero || !catalogHeroCopy || !catalogPanel) return;
+
+        if (!("IntersectionObserver" in window)) {
+          catalogHero.classList.add("is-catalog-visible");
+          return;
+        }
+
+        const catalogHeroObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.intersectionRatio >= 0.45) {
+                catalogHero.classList.add("is-catalog-visible");
+              } else if (!entry.isIntersecting) {
+                catalogHero.classList.remove("is-catalog-visible");
+              }
+            });
+          },
+          {
+            threshold: [0, 0.2, 0.45, 0.8],
+          },
+        );
+
+        catalogHeroObserver.observe(catalogHero);
+      })();
+
+      (function () {
+        const productsSection = document.querySelector(".products-section");
+        if (!productsSection) return;
+
+        if (!("IntersectionObserver" in window)) {
+          productsSection.classList.add("is-products-visible");
+          return;
+        }
+
+        let isProductsCentered = false;
+        let isFooterFullyVisible = false;
+
+        const syncProductsVisibility = function () {
+          if (isFooterFullyVisible) {
+            productsSection.classList.remove("is-products-visible");
+            return;
+          }
+
+          if (isProductsCentered) {
+            productsSection.classList.add("is-products-visible");
+          } else {
+            productsSection.classList.remove("is-products-visible");
+          }
+        };
+
+        const siteFooter = document.querySelector(".site-footer");
+
+        if (siteFooter) {
+          const footerObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                isFooterFullyVisible = entry.intersectionRatio >= 0.95;
+                syncProductsVisibility();
+              });
+            },
+            {
+              threshold: [0, 0.5, 0.95, 1],
+            },
+          );
+
+          footerObserver.observe(siteFooter);
+        }
+
+        const productsObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              const viewportCenter = window.innerHeight * 0.5;
+              const isCenteredInViewport =
+                entry.boundingClientRect.top <= viewportCenter &&
+                entry.boundingClientRect.bottom >= viewportCenter;
+
+              isProductsCentered = entry.isIntersecting && isCenteredInViewport;
+              syncProductsVisibility();
+            });
+          },
+          {
+            threshold: [0, 0.2, 0.5, 0.8, 1],
+          },
+        );
+
+        productsObserver.observe(productsSection);
+      })();
+
+      (function () {
+        const productsGrid = document.querySelector(".products-grid");
+        const productsSort = document.getElementById("productsSort");
+        const salesWaNumber = "6281234567891";
+        const viewButtons = Array.from(
+          document.querySelectorAll(".products-view-btn[data-view]"),
+        );
+
+        if (!productsGrid || viewButtons.length < 2) return;
+
+        const productCards = Array.from(
+          productsGrid.querySelectorAll(".product-card"),
+        );
+
+        productCards.forEach(function (card, index) {
+          card.dataset.originalIndex = String(index);
+
+          const media = card.querySelector(".product-media");
+          const titleNode = card.querySelector(".product-body h2");
+
+          if (!media || media.querySelector(".product-order-cta")) return;
+
+          const packageName = titleNode
+            ? titleNode.textContent.trim()
+            : "paket";
+          const orderLink = document.createElement("a");
+          const orderMessage =
+            "Halo admin Lamonte, saya ingin order " +
+            packageName +
+            ". Mohon info ketersediaan dan proses pembeliannya ya.";
+
+          orderLink.className = "product-order-cta";
+          orderLink.href =
+            "https://wa.me/" +
+            salesWaNumber +
+            "?text=" +
+            encodeURIComponent(orderMessage);
+          orderLink.target = "_blank";
+          orderLink.rel = "noopener noreferrer";
+          orderLink.textContent = "Order";
+
+          media.appendChild(orderLink);
+        });
+
+        function parsePrice(card) {
+          const priceNode = card.querySelector(".product-price");
+          if (!priceNode) return 0;
+
+          const numeric = (priceNode.textContent || "")
+            .replace(/[^0-9]/g, "")
+            .trim();
+
+          return Number(numeric || "0");
+        }
+
+        function sortProducts(mode) {
+          const sortedCards = Array.from(
+            productsGrid.querySelectorAll(".product-card"),
+          );
+
+          sortedCards.sort(function (a, b) {
+            if (mode === "price-asc") {
+              return parsePrice(a) - parsePrice(b);
+            }
+
+            if (mode === "price-desc") {
+              return parsePrice(b) - parsePrice(a);
+            }
+
+            return (
+              Number(a.dataset.originalIndex) - Number(b.dataset.originalIndex)
+            );
+          });
+
+          sortedCards.forEach(function (card) {
+            productsGrid.appendChild(card);
+          });
+        }
+
+        function setView(view) {
+          const isList = view === "list";
+          productsGrid.classList.toggle("is-list", isList);
+
+          viewButtons.forEach(function (button) {
+            const isActive = button.getAttribute("data-view") === view;
+            button.classList.toggle("is-active", isActive);
+            button.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+        }
+
+        viewButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const view = button.getAttribute("data-view");
+            if (!view) return;
+            setView(view);
+          });
+        });
+
+        if (productsSort) {
+          productsSort.addEventListener("change", function () {
+            sortProducts(productsSort.value || "relevance");
+          });
+        }
+
+        setView("grid");
+        sortProducts(productsSort ? productsSort.value : "relevance");
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1260 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kemitraan Perusahaan | Landing Page</title>
+    <meta
+      name="description"
+      content="Landing page kemitraan perusahaan untuk menampilkan informasi kerja sama bisnis."
+    />
+    <script>
+      document.documentElement.classList.add("js");
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem("lamonte-theme");
+          const prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = savedTheme || (prefersDark ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/media-queries.css" />
+  </head>
+  <body>
+    <div
+      class="intro-screen"
+      id="introScreen"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="introTitle"
+    >
+      <div class="intro-content">
+        <h2 id="introTitle">Apakah kamu tertarik bergabung bersama kami?</h2>
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrapper">
+          <a class="brand" aria-label="Beranda Kemitraan">
+            <img src="assets/img/logo.png" alt="Lamonte" class="brand-logo" />
+          </a>
+
+          <div class="nav-actions">
+            <nav class="site-nav" aria-label="Navigasi utama">
+              <a href="#tentang">Home</a>
+              <a href="#program">Module</a>
+              <a href="#kemitraan">Kemitraan</a>
+              <a href="#kontak">Contact</a>
+            </nav>
+
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle tema terang gelap"
+            >
+              <img src="assets/img/sun.svg" alt="Ikon matahari" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero section-space" id="tentang">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <p class="eyebrow">Kemitraan Lamonte</p>
+              <h1>Bangun Brand Baju Anak Tanpa Ribet</h1>
+              <p class="hero-lead">
+                Mulai lebih cepat dengan sistem siap pakai—tanpa pusing soal
+                produksi dan stok yang menumpuk, didukung dengan
+                <span>stok premium siap jual</span>. Kamu fokus jualan, tim kami
+                yang backup.
+              </p>
+
+              <div class="hero-points" aria-label="Keunggulan utama">
+                <span class="hero-point">Modal ringan, branding mewah</span>
+                <span class="hero-point">Pola jualan terbukti jalan</span>
+                <span class="hero-point"
+                  >Dibimbing sampai benar-benar<br />bisa</span
+                >
+                <span class="hero-point"
+                  >Cocok untuk ibu rumah tangga & pebisnis</span
+                >
+              </div>
+
+              <div class="hero-stats" aria-label="Ringkasan kemitraan">
+                <div class="hero-stat">
+                  <strong>4.9</strong>
+                  <p>Rating Kemitraan</p>
+                </div>
+                <div class="hero-stat">
+                  <strong>876K</strong>
+                  <p>Produk yang Terjual</p>
+                </div>
+                <div class="hero-stat">
+                  <strong>15-80 Juta</strong>
+                  <p>Omzet perBulan</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Visual hero section">
+              <img
+                src="assets/img/herosection.jpg"
+                alt="Visual hero section kemitraan Lamonte"
+                class="hero-image"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="module-section section-space" id="program">
+          <div class="container">
+            <div class="module-head">
+              <h2>Lamonte Partner Ecosystem 4.0</h2>
+              <p>
+                Kamu akan mendapatkan aplikasi dengan <span>modul lengkap</span>
+                untuk meningkatkan branding, konten, katalog, hingga closing
+                dalam satu ekosistem.
+              </p>
+            </div>
+
+            <div class="module-slider" data-module-slider>
+              <button
+                class="module-nav module-nav-left"
+                type="button"
+                aria-label="Geser modul ke kiri"
+                data-module-prev
+              >
+                <span aria-hidden="true">&#10094;</span>
+              </button>
+
+              <div class="module-viewport">
+                <div
+                  class="module-track"
+                  aria-label="Daftar modul kemitraan"
+                  data-module-track
+                >
+                  <article class="module-card module-blue">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/brand.jpg"
+                        alt="Preview modul Brand Identity Kit"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul A</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>Brand Identity Kit</h3>
+                      <p class="module-desc">
+                        Toko kecil rasa official store. Dapat desain sertifikat,
+                        ID card, banner, dan template feed seragam. Bikin calon
+                        pembeli langsung percaya.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>5 materi</span>
+                      </p>
+                      <p class="module-chip">Toko terlibat raji & niat</p>
+                    </div>
+                  </article>
+
+                  <article class="module-card module-purple">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/kalkulator.jpg"
+                        alt="Preview modul Kalkulator Cuan Sultan"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul B</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>Kalkulator Cuan Sultan</h3>
+                      <p class="module-desc">
+                        Masukkan modal dan target penghasilan. Sistem hitung
+                        otomatis target harian, harga ideal, dan skenario promo.
+                        Jualan pakai data, bukan feeling.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>7 materi</span>
+                      </p>
+                      <p class="module-chip">Tau angka, berani gas</p>
+                    </div>
+                  </article>
+
+                  <article class="module-card module-pink">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/content.jpg"
+                        alt="Preview modul Model & Content Academy"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul C</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>Model & Content Academy</h3>
+                      <p class="module-desc">
+                        Diajarin cara foto anak pakai HP, angle yang laku, dan
+                        filter praktis. Plus stok foto katalog profesional yang
+                        siap pakai.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>6 materi</span>
+                      </p>
+                      <p class="module-chip">Feed keliatan brand besar</p>
+                    </div>
+                  </article>
+
+                  <article class="module-card module-orange">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/marketplace.jpg"
+                        alt="Preview modul Marketplace Playbook"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul D</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>Marketplace Playbook</h3>
+                      <p class="module-desc">
+                        Step-by-step buka toko di marketplace. Dapat contoh
+                        judul, deskripsi, foto, dan pola diskon yang bikin
+                        produk sering muncul di pencarian.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>8 materi</span>
+                      </p>
+                      <p class="module-chip">Nggak bingungu mulai dari mana</p>
+                    </div>
+                  </article>
+
+                  <article class="module-card module-blue">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/wa.jpg"
+                        alt="Preview modul WA Automation & Script Closing"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul E</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>WA Automation & Script Closing</h3>
+                      <p class="module-desc">
+                        Tinggal copy-paste template yang sudah teruji. Dari chat
+                        hanya harga sampai minta diskon. Bisa diset otomatis,
+                        jadi tetap closing walau kamu lagi sibuk.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>6 materi</span>
+                      </p>
+                      <p class="module-chip">Chat rapi, closing naik</p>
+                    </div>
+                  </article>
+
+                  <article class="module-card module-purple">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/ide.jpg"
+                        alt="Preview modul 365 Hari Kalender Konten"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul F</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>365 Hari Kalender Konten</h3>
+                      <p class="module-desc">
+                        Ide konten harian sudah disiapkan. Ada contoh caption,
+                        hook, dan CTA. Tinggal pilih, eksekusi, dan ulangi.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>7 materi</span>
+                      </p>
+                      <p class="module-chip">Setahun selalu ada bahan</p>
+                    </div>
+                  </article>
+
+                  <article class="module-card module-pink">
+                    <div class="module-media">
+                      <img
+                        src="assets/img/order.jpg"
+                        alt="Preview modul Retensi dan Repeat Order"
+                        class="module-image"
+                      />
+                      <span class="module-media-tag">Modul G</span>
+                    </div>
+                    <div class="module-body">
+                      <h3>Retensi dan Repeat Order</h3>
+                      <p class="module-desc">
+                        Pelajari alur layanan purna jual, broadcast berkala, dan
+                        program loyalti sederhana supaya pembeli lama balik
+                        order tanpa harus mulai dari nol lagi.
+                      </p>
+                      <p class="module-meta">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path
+                            d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm6 1.5V9h4.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>5 materi</span>
+                      </p>
+                      <p class="module-chip">Pembeli lama balik lagi</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <button
+                class="module-nav module-nav-right"
+                type="button"
+                aria-label="Geser modul ke kanan"
+                data-module-next
+              >
+                <span aria-hidden="true">&#10095;</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="mitra-section section-space" id="kemitraan">
+          <div class="container mitra-layout">
+            <div class="mitra-copy">
+              <h2>
+                Kenapa Bisnis Baju Anak
+                <span>Wajib Kamu Seriusin</span> Tahun Ini?
+              </h2>
+              <p class="mitra-intro">
+                Baju orang dewasa bisa dipakai bertahun-tahun. Baju anak? Ganti
+                ukuran tiap beberapa bulan. Artinya:
+              </p>
+
+              <ol class="mitra-reasons">
+                <li>
+                  <span class="mitra-badge">1</span>
+                  <p>
+                    Anak tumbuh, bunda
+                    <strong>butuh beli lagi dan lagi.</strong>
+                    Repeat order tinggi kalau pelayanan kamu enak.
+                  </p>
+                </li>
+                <li>
+                  <span class="mitra-badge">2</span>
+                  <p>
+                    Busana muslim anak
+                    <strong>permintaannya terus naik,</strong> terutama jelang
+                    Ramadan, lebaran, dan musim sekolah.
+                  </p>
+                </li>
+                <li>
+                  <span class="mitra-badge">3</span>
+                  <p>
+                    Belum banyak brand yang serius jaga
+                    <strong>kualitas + kenyamanan + nilai syari'</strong>
+                    sekaligus. Di sini Lamonte mengisi celah.
+                  </p>
+                </li>
+              </ol>
+
+              <div class="mitra-alert" aria-label="Kenapa harus sekarang">
+                <span class="mitra-alert-icon" aria-hidden="true">&#9889;</span>
+                <div>
+                  <h3>Kenapa harus sekarang?</h3>
+                  <p>
+                    Jumlah distributor dan reseller aktif per wilayah dibatasi
+                    supaya <strong>tidak terjadi perang harga.</strong> Semakin
+                    cepat ambil slot, semakin mudah kamu kuasai pasar di kotamu.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="mitra-flow" aria-label="Cara kerja bisnis Lamonte">
+              <h3>Cara Kerja Bisnis Lamonte Dalam 3 Langkah</h3>
+
+              <div class="mitra-steps">
+                <article class="mitra-step">
+                  <span class="mitra-step-number">1</span>
+                  <div>
+                    <h4>Pilih Paket Sesuai Modal</h4>
+                    <p>
+                      Dari tanpa stok sampai paket distributor provinsi. Semua
+                      sudah termasuk bimbingan dan akses ekosistem.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="mitra-step">
+                  <span class="mitra-step-number">2</span>
+                  <div>
+                    <h4>Ikuti Onboarding &amp; Setting Sistem</h4>
+                    <p>
+                      Kami pandu lewat video dan grup WA. Mulai dari instal
+                      aplikasi sampai katalog siap jualan.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="mitra-step">
+                  <span class="mitra-step-number">3</span>
+                  <div>
+                    <h4>Kamu Jualan, Tim Backup</h4>
+                    <p>
+                      Kamu fokus konten dan layani pembeli. Tim Lamonte bantu
+                      stok, materi marketing, dan upgrade skill.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <a href="katalog.html" class="mitra-cta"
+                >Lihat Katalog Paket Kemitraan</a
+              >
+            </aside>
+          </div>
+        </section>
+
+        <section class="testimonial-section section-space" id="testimonials">
+          <div class="container">
+            <div class="testimonial-head">
+              <p class="testimonial-kicker">TESTIMONIALS</p>
+              <h2>What Our Customers Say</h2>
+              <p class="testimonial-lead">
+                Kepuasan customer adalah semangat utama kami. Saat customer
+                merasa terbantu dan percaya pada layanan Lamonte, kami semakin
+                termotivasi untuk terus memberi pengalaman yang lebih baik.
+              </p>
+            </div>
+
+            <div class="testimonial-viewport">
+              <div class="testimonial-grid" aria-label="Testimoni customer">
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"
+                    >&#10077;</span
+                  >
+                  <p class="testimonial-text">
+                    Alhamdulillah, sejak jualan baju anak Lamonte repeat order
+                    di toko saya naik terus. Bahannya adem, motifnya juga
+                    disukai para ibu.
+                  </p>
+                  <p class="testimonial-stars" aria-label="Rating bintang 4">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      class="testimonial-avatar"
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt="Foto customer Fajar Ramadhan"
+                    />
+                    <div>
+                      <h3>Fajar Ramadhan</h3>
+                      <p>Customer Bogor</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="testimonial-card testimonial-card-active">
+                  <span class="testimonial-quote" aria-hidden="true"
+                    >&#10077;</span
+                  >
+                  <p class="testimonial-text">
+                    Program kemitraannya enak banget diikutin. Saya tinggal
+                    fokus upload konten baju anak, stok aman dan katalognya
+                    lengkap, jadi closing lebih cepat.
+                  </p>
+                  <p class="testimonial-stars" aria-label="Rating bintang 4">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      class="testimonial-avatar"
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      alt="Foto customer Intan Maharani"
+                    />
+                    <div>
+                      <h3>Intan Maharani</h3>
+                      <p>Customer Bandung</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"
+                    >&#10077;</span
+                  >
+                  <p class="testimonial-text">
+                    Model baju anaknya kekinian dan kualitas jahitannya rapi.
+                    Banyak pembeli bilang cocok buat dipakai harian maupun
+                    acara, jadi omzet bulanan saya makin stabil.
+                  </p>
+                  <p class="testimonial-stars" aria-label="Rating bintang 4">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      class="testimonial-avatar"
+                      src="https://randomuser.me/api/portraits/women/68.jpg"
+                      alt="Foto customer Sari Wulandari"
+                    />
+                    <div>
+                      <h3>Sari Wulandari</h3>
+                      <p>Customer Jakarta</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"
+                    >&#10077;</span
+                  >
+                  <p class="testimonial-text">
+                    Konten yang disiapkan Lamonte bikin saya lebih konsisten
+                    upload. Pembeli di Surabaya bilang katalog saya sekarang
+                    kelihatan jauh lebih rapi dan meyakinkan.
+                  </p>
+                  <p class="testimonial-stars" aria-label="Rating bintang 4">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      class="testimonial-avatar"
+                      src="https://randomuser.me/api/portraits/men/45.jpg"
+                      alt="Foto customer Riko Pratama"
+                    />
+                    <div>
+                      <h3>Riko Pratama</h3>
+                      <p>Customer Surabaya</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"
+                    >&#10077;</span
+                  >
+                  <p class="testimonial-text">
+                    Respon timnya cepat dan jelas, jadi saya nggak bingung saat
+                    mulai jualan. Penjualan dari Yogyakarta terasa lebih terarah
+                    karena semuanya sudah disiapkan.
+                  </p>
+                  <p class="testimonial-stars" aria-label="Rating bintang 4">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      class="testimonial-avatar"
+                      src="https://randomuser.me/api/portraits/women/12.jpg"
+                      alt="Foto customer Nabila Azzahra"
+                    />
+                    <div>
+                      <h3>Nabila Azzahra</h3>
+                      <p>Customer Yogyakarta</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="testimonial-card">
+                  <span class="testimonial-quote" aria-hidden="true"
+                    >&#10077;</span
+                  >
+                  <p class="testimonial-text">
+                    Saya suka karena materi promonya gampang dipakai ulang. Dari
+                    Semarang, saya jadi lebih percaya diri kasih penawaran ke
+                    pelanggan tanpa harus bikin dari nol.
+                  </p>
+                  <p class="testimonial-stars" aria-label="Rating bintang 4">
+                    &#9733; &#9733; &#9733; &#9733; &#9734;
+                  </p>
+                  <div class="testimonial-author">
+                    <img
+                      class="testimonial-avatar"
+                      src="https://randomuser.me/api/portraits/men/86.jpg"
+                      alt="Foto customer Dedi Saputra"
+                    />
+                    <div>
+                      <h3>Dedi Saputra</h3>
+                      <p>Customer Semarang</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="kontak">
+        <div class="container footer-grid">
+          <div class="footer-brand-col">
+            <a href="#" class="footer-brand" aria-label="Lamonte">
+              <img
+                src="assets/img/logo.png"
+                alt="Lamonte"
+                class="footer-logo"
+              />
+            </a>
+            <p class="footer-note">
+              Lamonte hadir bantu kamu bangun bisnis baju anak dengan sistem
+              yang jelas, siap jalan, dan mudah di-scale.
+            </p>
+            <div class="footer-social" aria-label="Sosial media Lamonte">
+              <a
+                href="https://www.instagram.com/lamonte.id?igsh=MTJzdmsxemk5ZDBhcw=="
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4.1"></circle>
+                  <circle cx="17.3" cy="6.7" r="1.2"></circle>
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@lamonteid?_r=1&_t=ZS-95atbMkt2iz"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 4v10.2a3.8 3.8 0 1 1-3.8-3.8"></path>
+                  <path d="M14 4c1 .9 2.1 1.6 3.5 1.7"></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/lamonte.shop/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M13.6 21v-7h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.5-1.5h1.6V5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V11H8v3h2.3v7h3.3z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://youtube.com/@lamonteid?si=znTRK1t9bm_3MJXs"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="YouTube"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6.5" width="18" height="11" rx="3.5"></rect>
+                  <path d="M10 9.5v5l4.5-2.5z"></path>
+                </svg>
+              </a>
+              <a
+                href="https://whatsapp.com/channel/0029VaFJuCaDuMRjl2aaVw2j"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1.2-3.2A8.5 8.5 0 1 1 20 11.5z"
+                  ></path>
+                  <path
+                    d="M9.4 8.8c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.4.3l.7 1.8c.1.2 0 .4-.1.5l-.5.6c-.1.1-.1.2 0 .4.2.5.7 1 1.2 1.3.5.3 1 .5 1.3.6.2.1.3.1.4 0l.7-.6c.1-.1.3-.1.5-.1l1.7.8c.2.1.3.2.3.4v.5c0 .3-.1.5-.4.7-.4.3-1 .5-1.7.4-.8-.1-1.8-.5-2.9-1.2-1.5-.9-2.5-2.1-2.9-3.4-.3-.8-.3-1.6.1-2.4z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-company-col">
+            <h3>Company</h3>
+            <ul class="footer-company-list">
+              <li>
+                Alamat: JQ5W+RH9, Mampang, Kec. Pancoran Mas, Kota Depok, Jawa
+                Barat 16433
+              </li>
+              <li>Telepon: +62 xxx-xxxx-xxxx</li>
+              <li>Email: business@lamonte.id</li>
+              <li>
+                Website:
+                <a href="https://lamonte.id/" target="_blank" rel="noreferrer"
+                  >lamonte.id</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-feedback-col">
+            <div class="feedback-card">
+              <h3>Beritahu kami tentang apa yang kamu pikirkan</h3>
+              <form
+                class="feedback-form"
+                id="feedbackForm"
+                data-wa-number="6281234567890"
+              >
+                <textarea
+                  id="feedbackMessage"
+                  name="message"
+                  rows="5"
+                  placeholder="Tulis saran, pertanyaan, atau kebutuhan kamu di sini..."
+                ></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <p>&copy; 2026 Kemitraan Lamonte. Seluruh hak cipta dilindungi.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const intro = document.getElementById("introScreen");
+        if (!intro) return;
+
+        const seenKey = "lamonte-intro-seen";
+        const closeIntro = function () {
+          intro.classList.add("is-hidden");
+          document.body.classList.remove("has-intro");
+          try {
+            localStorage.setItem(seenKey, "1");
+          } catch (error) {
+            // no-op
+          }
+        };
+
+        let alreadySeen = false;
+        try {
+          alreadySeen = localStorage.getItem(seenKey) === "1";
+        } catch (error) {
+          alreadySeen = false;
+        }
+
+        if (alreadySeen) {
+          intro.classList.add("is-hidden");
+          return;
+        }
+
+        document.body.classList.add("has-intro");
+
+        window.setTimeout(function () {
+          closeIntro();
+        }, 3200);
+      })();
+
+      (function () {
+        const toggle = document.querySelector(".theme-toggle");
+        const icon = toggle ? toggle.querySelector("img") : null;
+        if (!toggle || !icon) return;
+
+        function applyTheme(theme) {
+          const isDark = theme === "dark";
+          document.documentElement.setAttribute(
+            "data-theme",
+            isDark ? "dark" : "light",
+          );
+          icon.src = isDark ? "assets/img/moon.svg" : "assets/img/sun.svg";
+          icon.alt = isDark ? "Ikon bulan" : "Ikon matahari";
+          toggle.setAttribute(
+            "aria-label",
+            isDark ? "Ganti ke mode terang" : "Ganti ke mode gelap",
+          );
+        }
+
+        const initialTheme =
+          document.documentElement.getAttribute("data-theme") || "light";
+        applyTheme(initialTheme);
+
+        toggle.addEventListener("click", function () {
+          const currentTheme =
+            document.documentElement.getAttribute("data-theme") || "light";
+          const nextTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(nextTheme);
+          try {
+            localStorage.setItem("lamonte-theme", nextTheme);
+          } catch (error) {
+            // no-op
+          }
+        });
+      })();
+
+      (function () {
+        const header = document.querySelector(".site-header");
+        if (!header) return;
+
+        function syncHeaderState() {
+          header.classList.toggle("is-scrolled", window.scrollY > 12);
+        }
+
+        window.addEventListener("scroll", syncHeaderState, { passive: true });
+        syncHeaderState();
+      })();
+
+      (function () {
+        const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+        const header = document.querySelector(".site-header");
+
+        if (!navLinks.length || !header) return;
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            const targetSelector = link.getAttribute("href");
+            if (!targetSelector) return;
+
+            const target = document.querySelector(targetSelector);
+            if (!target) return;
+
+            event.preventDefault();
+            const headerOffset = header.offsetHeight + 8;
+            const targetY =
+              target.getBoundingClientRect().top +
+              window.scrollY -
+              headerOffset;
+
+            window.scrollTo({
+              top: Math.max(0, targetY),
+              behavior: "smooth",
+            });
+          });
+        });
+      })();
+
+      (function () {
+        const hero = document.querySelector(".hero");
+        if (!hero || !("IntersectionObserver" in window)) return;
+
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.intersectionRatio >= 0.45) {
+                hero.classList.remove("is-exit");
+                hero.classList.remove("is-active");
+                void hero.offsetWidth;
+                hero.classList.add("is-active");
+              } else if (entry.intersectionRatio <= 0.2) {
+                hero.classList.remove("is-exit");
+                void hero.offsetWidth;
+                hero.classList.add("is-exit");
+              }
+
+              if (!entry.isIntersecting) {
+                hero.classList.remove("is-active");
+                hero.classList.remove("is-exit");
+              }
+            });
+          },
+          {
+            threshold: [0, 0.2, 0.45],
+          },
+        );
+
+        observer.observe(hero);
+      })();
+
+      (function () {
+        const moduleSection = document.querySelector(".module-section");
+        const moduleHead = document.querySelector(".module-head");
+        const moduleSlider = document.querySelector(".module-slider");
+
+        if (!moduleSection || !moduleHead || !moduleSlider) return;
+
+        if (!("IntersectionObserver" in window)) {
+          moduleSection.classList.add(
+            "is-head-visible",
+            "is-slider-visible",
+            "is-head-active",
+            "is-cards-active",
+          );
+          return;
+        }
+
+        const activate = function (element, className) {
+          element.classList.remove(className);
+          void element.offsetWidth;
+          element.classList.add(className);
+        };
+
+        const headObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.intersectionRatio >= 0.45) {
+                moduleSection.classList.add("is-head-visible");
+                activate(moduleSection, "is-head-active");
+              } else if (
+                entry.intersectionRatio <= 0.28 ||
+                !entry.isIntersecting
+              ) {
+                moduleSection.classList.remove("is-head-visible");
+                moduleSection.classList.remove("is-head-active");
+              }
+            });
+          },
+          {
+            threshold: [0, 0.28, 0.45, 0.8],
+          },
+        );
+
+        const cardsObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.intersectionRatio >= 0.95) {
+                moduleSection.classList.add("is-slider-visible");
+                activate(moduleSection, "is-cards-active");
+                window.dispatchEvent(new Event("module-cards-activate"));
+              } else if (entry.intersectionRatio < 0.95) {
+                moduleSection.classList.remove("is-slider-visible");
+                moduleSection.classList.remove("is-cards-active");
+                window.dispatchEvent(new Event("module-cards-reset"));
+              }
+            });
+          },
+          {
+            threshold: [0, 0.8, 0.95, 1],
+          },
+        );
+
+        headObserver.observe(moduleHead);
+        cardsObserver.observe(moduleSlider);
+      })();
+
+      (function () {
+        const slider = document.querySelector("[data-module-slider]");
+        if (!slider) return;
+
+        const track = slider.querySelector("[data-module-track]");
+        const prevBtn = slider.querySelector("[data-module-prev]");
+        const nextBtn = slider.querySelector("[data-module-next]");
+        const cards = Array.from(track.children);
+
+        if (!track || !prevBtn || !nextBtn || cards.length === 0) return;
+
+        let currentIndex = 0;
+        let previousVisibleIndices = [];
+        const moduleSlideDuration = 0.35;
+        let dimTimer = null;
+
+        function getPerView() {
+          if (window.innerWidth <= 680) return 1;
+          if (window.innerWidth <= 980) return 2;
+          return 3;
+        }
+
+        function getStep() {
+          if (cards.length < 2) {
+            return cards[0].getBoundingClientRect().width;
+          }
+          return cards[1].offsetLeft - cards[0].offsetLeft;
+        }
+
+        function getVisibleIndices(perView) {
+          const maxIndex = Math.max(0, cards.length - perView);
+          const start = Math.max(0, Math.min(currentIndex, maxIndex));
+          const end = Math.min(cards.length, start + perView);
+          const indices = [];
+
+          for (let i = start; i < end; i += 1) {
+            indices.push(i);
+          }
+
+          return indices;
+        }
+
+        function animateEnteringCards(indices, extraDelay) {
+          indices.forEach(function (cardIndex, orderIndex) {
+            const card = cards[cardIndex];
+            if (!card) return;
+
+            const delay = 0.14 + extraDelay + orderIndex * 0.26;
+            card.style.setProperty("--module-enter-delay", delay + "s");
+            card.classList.remove("module-enter");
+            void card.offsetWidth;
+            card.classList.add("module-enter");
+          });
+        }
+
+        function clearDimState() {
+          cards.forEach(function (card) {
+            card.classList.remove("is-dim");
+          });
+        }
+
+        function applyDimState(indices) {
+          clearDimState();
+          indices.forEach(function (cardIndex) {
+            const card = cards[cardIndex];
+            if (!card) return;
+            card.classList.add("is-dim");
+          });
+        }
+
+        function render(animationSource) {
+          const perView = getPerView();
+          const maxIndex = Math.max(0, cards.length - perView);
+          currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+          const step = getStep();
+          track.style.transform = "translateX(-" + currentIndex * step + "px)";
+
+          prevBtn.disabled = currentIndex <= 0;
+          nextBtn.disabled = currentIndex >= maxIndex;
+
+          const visibleIndices = getVisibleIndices(perView);
+
+          if (animationSource) {
+            const enteringIndices = visibleIndices.filter(function (idx) {
+              return !previousVisibleIndices.includes(idx);
+            });
+
+            if (enteringIndices.length > 0) {
+              const extraDelay =
+                animationSource === "slide" ? moduleSlideDuration : 0;
+              animateEnteringCards(enteringIndices, extraDelay);
+            }
+          }
+
+          if (dimTimer) {
+            clearTimeout(dimTimer);
+            dimTimer = null;
+          }
+
+          if (animationSource === "slide") {
+            clearDimState();
+            dimTimer = setTimeout(
+              function () {
+                applyDimState(visibleIndices);
+              },
+              Math.round(moduleSlideDuration * 1000),
+            );
+          } else {
+            applyDimState(visibleIndices);
+          }
+
+          previousVisibleIndices = visibleIndices;
+        }
+
+        prevBtn.addEventListener("click", function () {
+          const perView = getPerView();
+          currentIndex -= perView;
+          render("slide");
+        });
+
+        nextBtn.addEventListener("click", function () {
+          const perView = getPerView();
+          currentIndex += perView;
+          render("slide");
+        });
+
+        window.addEventListener("resize", function () {
+          render(null);
+        });
+
+        window.addEventListener("module-cards-reset", function () {
+          if (dimTimer) {
+            clearTimeout(dimTimer);
+            dimTimer = null;
+          }
+          previousVisibleIndices = [];
+          clearDimState();
+          cards.forEach(function (card) {
+            card.classList.remove("module-enter");
+          });
+        });
+
+        window.addEventListener("module-cards-activate", function () {
+          previousVisibleIndices = [];
+          render("activate");
+        });
+
+        render(null);
+      })();
+
+      (function () {
+        const form = document.getElementById("feedbackForm");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const textarea = document.getElementById("feedbackMessage");
+          if (!textarea) return;
+
+          const message = textarea.value.trim();
+          if (!message) {
+            textarea.focus();
+            return;
+          }
+
+          const waNumber =
+            form.getAttribute("data-wa-number") || "6281234567890";
+          const text = "Halo tim Lamonte, saya ingin menyampaikan: " + message;
+          const url =
+            "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(text);
+          window.open(url, "_blank", "noopener");
+        });
+      })();
+
+      (function () {
+        const mitraSection = document.querySelector(".mitra-section");
+        if (!mitraSection || !("IntersectionObserver" in window)) return;
+
+        const mitraObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.intersectionRatio >= 0.8) {
+                mitraSection.classList.add("is-mitra-visible");
+              } else if (!entry.isIntersecting) {
+                mitraSection.classList.remove("is-mitra-visible");
+              }
+            });
+          },
+          { threshold: [0, 0.8, 0.95, 1] },
+        );
+
+        mitraObserver.observe(mitraSection);
+      })();
+
+      (function () {
+        const testimonialSection = document.querySelector(
+          ".testimonial-section",
+        );
+        const testimonialGrid = testimonialSection
+          ? testimonialSection.querySelector(".testimonial-grid")
+          : null;
+
+        if (!testimonialSection || !testimonialGrid) return;
+
+        if (!testimonialGrid.dataset.loopReady) {
+          const testimonialCards = Array.from(testimonialGrid.children);
+          testimonialCards.forEach(function (card) {
+            const clone = card.cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            testimonialGrid.appendChild(clone);
+          });
+          testimonialGrid.dataset.loopReady = "true";
+        }
+
+        if (!("IntersectionObserver" in window)) {
+          testimonialSection.classList.add("is-testimonial-visible");
+          return;
+        }
+
+        let isFooterBlockingTestimonial = false;
+        let isTestimonialInView = false;
+
+        const syncTestimonialVisibility = function () {
+          if (isFooterBlockingTestimonial) {
+            testimonialSection.classList.remove("is-testimonial-visible");
+            return;
+          }
+
+          if (isTestimonialInView) {
+            testimonialSection.classList.add("is-testimonial-visible");
+          } else {
+            testimonialSection.classList.remove("is-testimonial-visible");
+          }
+        };
+
+        const siteFooter = document.querySelector(".site-footer");
+
+        if (siteFooter) {
+          const footerObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                isFooterBlockingTestimonial = entry.intersectionRatio >= 0.25;
+                syncTestimonialVisibility();
+              });
+            },
+            { threshold: [0, 0.25, 0.5, 1] },
+          );
+
+          footerObserver.observe(siteFooter);
+        }
+
+        const testimonialObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              isTestimonialInView =
+                entry.isIntersecting && entry.intersectionRatio >= 0.45;
+              syncTestimonialVisibility();
+            });
+          },
+          { threshold: [0, 0.2, 0.45, 0.8] },
+        );
+
+        testimonialObserver.observe(testimonialSection);
+      })();
+    </script>
+  </body>
+</html>
