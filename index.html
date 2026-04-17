@@ -50,7 +50,19 @@
           </a>
 
           <div class="nav-actions">
-            <nav class="site-nav" aria-label="Navigasi utama">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-label="Buka menu navigasi"
+              aria-expanded="false"
+              aria-controls="siteNavMenu"
+            >
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav class="site-nav" id="siteNavMenu" aria-label="Navigasi utama">
               <a href="#tentang">Home</a>
               <a href="#program">Module</a>
               <a href="#kemitraan">Kemitraan</a>
@@ -782,10 +794,34 @@
         const intro = document.getElementById("introScreen");
         if (!intro) return;
 
+        const seenKey = "lamonte-intro-seen";
+        const navEntry =
+          performance && typeof performance.getEntriesByType === "function"
+            ? performance.getEntriesByType("navigation")[0]
+            : null;
+        const isReload = navEntry ? navEntry.type === "reload" : false;
+
         const closeIntro = function () {
           intro.classList.add("is-hidden");
           document.body.classList.remove("has-intro");
+          try {
+            sessionStorage.setItem(seenKey, "1");
+          } catch (error) {
+            // no-op
+          }
         };
+
+        let alreadySeen = false;
+        try {
+          alreadySeen = sessionStorage.getItem(seenKey) === "1";
+        } catch (error) {
+          alreadySeen = false;
+        }
+
+        if (alreadySeen && !isReload) {
+          intro.classList.add("is-hidden");
+          return;
+        }
 
         document.body.classList.add("has-intro");
 
@@ -826,6 +862,50 @@
             localStorage.setItem("lamonte-theme", nextTheme);
           } catch (error) {
             // no-op
+          }
+        });
+      })();
+
+      (function () {
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.getElementById("siteNavMenu");
+        const header = document.querySelector(".site-header");
+        if (!navToggle || !navMenu || !header) return;
+
+        const setMenuState = function (isOpen) {
+          header.classList.toggle("is-nav-open", isOpen);
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Tutup menu navigasi" : "Buka menu navigasi",
+          );
+        };
+
+        navToggle.addEventListener("click", function () {
+          const isOpen = header.classList.contains("is-nav-open");
+          setMenuState(!isOpen);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !header.classList.contains("is-nav-open") ||
+            header.contains(event.target)
+          ) {
+            return;
+          }
+
+          setMenuState(false);
+        });
+
+        navMenu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenuState(false);
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            setMenuState(false);
           }
         });
       })();
@@ -949,11 +1029,19 @@
         const cardsObserver = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
-              if (entry.intersectionRatio >= 0.95) {
+              const imageHeight = window.innerWidth <= 680 ? 108 : 148;
+              const isImageAreaVisible =
+                entry.boundingClientRect.top > -imageHeight;
+
+              if (
+                entry.isIntersecting &&
+                isImageAreaVisible &&
+                entry.intersectionRatio >= 0.55
+              ) {
                 moduleSection.classList.add("is-slider-visible");
                 activate(moduleSection, "is-cards-active");
                 window.dispatchEvent(new Event("module-cards-activate"));
-              } else if (entry.intersectionRatio < 0.95) {
+              } else {
                 moduleSection.classList.remove("is-slider-visible");
                 moduleSection.classList.remove("is-cards-active");
                 window.dispatchEvent(new Event("module-cards-reset"));
@@ -961,7 +1049,7 @@
             });
           },
           {
-            threshold: [0, 0.8, 0.95, 1],
+            threshold: [0, 0.35, 0.55, 0.8],
           },
         );
 
@@ -1146,19 +1234,26 @@
 
       (function () {
         const mitraSection = document.querySelector(".mitra-section");
-        if (!mitraSection || !("IntersectionObserver" in window)) return;
+        if (!mitraSection) return;
+
+        if (!("IntersectionObserver" in window)) {
+          mitraSection.classList.add("is-mitra-visible");
+          return;
+        }
+
+        const revealThreshold = window.innerWidth <= 768 ? 0.25 : 0.8;
 
         const mitraObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.intersectionRatio >= 0.8) {
+              if (entry.intersectionRatio >= revealThreshold) {
                 mitraSection.classList.add("is-mitra-visible");
               } else if (!entry.isIntersecting) {
                 mitraSection.classList.remove("is-mitra-visible");
               }
             });
           },
-          { threshold: [0, 0.8, 0.95, 1] },
+          { threshold: [0, revealThreshold, 0.95, 1] },
         );
 
         mitraObserver.observe(mitraSection);
@@ -1168,6 +1263,7 @@
         const testimonialSection = document.querySelector(
           ".testimonial-section",
         );
+        const mitraSection = document.querySelector(".mitra-section");
         const testimonialGrid = testimonialSection
           ? testimonialSection.querySelector(".testimonial-grid")
           : null;
@@ -1195,6 +1291,13 @@
         const syncTestimonialVisibility = function () {
           if (isFooterBlockingTestimonial) {
             testimonialSection.classList.remove("is-testimonial-visible");
+            if (window.innerWidth <= 768 && mitraSection) {
+              const rect = mitraSection.getBoundingClientRect();
+              const isMitraInView =
+                rect.top < window.innerHeight * 0.8 &&
+                rect.bottom > window.innerHeight * 0.15;
+              mitraSection.classList.toggle("is-mitra-visible", isMitraInView);
+            }
             return;
           }
 
@@ -1202,6 +1305,20 @@
             testimonialSection.classList.add("is-testimonial-visible");
           } else {
             testimonialSection.classList.remove("is-testimonial-visible");
+          }
+
+          if (window.innerWidth <= 768 && mitraSection) {
+            if (
+              testimonialSection.classList.contains("is-testimonial-visible")
+            ) {
+              mitraSection.classList.remove("is-mitra-visible");
+            } else {
+              const rect = mitraSection.getBoundingClientRect();
+              const isMitraInView =
+                rect.top < window.innerHeight * 0.8 &&
+                rect.bottom > window.innerHeight * 0.15;
+              mitraSection.classList.toggle("is-mitra-visible", isMitraInView);
+            }
           }
         };
 

@@ -38,7 +38,23 @@
           </a>
 
           <div class="nav-actions">
-            <nav class="site-nav" aria-label="Navigasi utama katalog">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-label="Buka menu navigasi"
+              aria-expanded="false"
+              aria-controls="siteNavMenu"
+            >
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav
+              class="site-nav"
+              id="siteNavMenu"
+              aria-label="Navigasi utama katalog"
+            >
               <a href="index.html#tentang">Home</a>
               <a href="index.html#program">Module</a>
               <a href="index.html#kemitraan">Kemitraan</a>
@@ -638,6 +654,50 @@
       })();
 
       (function () {
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.getElementById("siteNavMenu");
+        const header = document.querySelector(".site-header");
+        if (!navToggle || !navMenu || !header) return;
+
+        const setMenuState = function (isOpen) {
+          header.classList.toggle("is-nav-open", isOpen);
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Tutup menu navigasi" : "Buka menu navigasi",
+          );
+        };
+
+        navToggle.addEventListener("click", function () {
+          const isOpen = header.classList.contains("is-nav-open");
+          setMenuState(!isOpen);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !header.classList.contains("is-nav-open") ||
+            header.contains(event.target)
+          ) {
+            return;
+          }
+
+          setMenuState(false);
+        });
+
+        navMenu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenuState(false);
+          });
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            setMenuState(false);
+          }
+        });
+      })();
+
+      (function () {
         const header = document.querySelector(".site-header");
         if (!header) return;
 
@@ -706,6 +766,7 @@
 
       (function () {
         const productsSection = document.querySelector(".products-section");
+        const catalogHero = document.querySelector(".catalog-hero");
         if (!productsSection) return;
 
         if (!("IntersectionObserver" in window)) {
@@ -719,13 +780,22 @@
         const syncProductsVisibility = function () {
           if (isFooterFullyVisible) {
             productsSection.classList.remove("is-products-visible");
+            if (catalogHero) {
+              catalogHero.classList.remove("is-panel-hidden");
+            }
             return;
           }
 
           if (isProductsCentered) {
             productsSection.classList.add("is-products-visible");
+            if (catalogHero) {
+              catalogHero.classList.add("is-panel-hidden");
+            }
           } else {
             productsSection.classList.remove("is-products-visible");
+            if (catalogHero) {
+              catalogHero.classList.remove("is-panel-hidden");
+            }
           }
         };
 
