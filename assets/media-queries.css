@@ -68,6 +68,25 @@
   .hero-visual {
     min-height: 280px;
     order: -1;
+    background: transparent;
+  }
+
+  .hero-image {
+    object-position: 28% 30%;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 72%,
+      rgba(0, 0, 0, 0.58) 88%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 72%,
+      rgba(0, 0, 0, 0.58) 88%,
+      transparent 100%
+    );
   }
 
   .module-head h2 {
@@ -917,4 +936,10 @@ html[data-theme="dark"] .site-nav {
   border-color: rgba(170, 201, 153, 0.3);
   background: rgba(18, 30, 22, 0.98);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.32);
+}
+
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none !important;
+  }
 }

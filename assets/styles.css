@@ -13,6 +13,7 @@
 
   --bg-page: var(--cream-100);
   --bg-panel: var(--cream-50);
+  --hero-fade-tint: #dbe6bd;
   --text-main: var(--green-900);
   --text-soft: #5f6b56;
   --line-soft: rgba(47, 106, 29, 0.2);
@@ -25,6 +26,7 @@ html[data-theme="dark"] {
   color-scheme: dark;
   --bg-page: #0f1713;
   --bg-panel: #15211a;
+  --hero-fade-tint: #18261b;
   --text-main: #e7f1e4;
   --text-soft: #b8c7ba;
   --line-soft: rgba(158, 186, 145, 0.28);
@@ -759,6 +761,7 @@ main {
   place-items: center;
   overflow: hidden;
   border-radius: 24px;
+  background: transparent;
 }
 
 .hero-image {
@@ -769,36 +772,24 @@ main {
   height: 100%;
   right: 0;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: 28% 30%;
   border-radius: inherit;
   box-shadow: 0 18px 32px rgba(27, 19, 10, 0.2);
   -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 72%,
-    rgba(0, 0, 0, 0.58) 88%,
-    transparent 100%
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.22) 14%,
+    rgba(0, 0, 0, 0.6) 28%,
+    rgba(0, 0, 0, 1) 42%
   );
   mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 72%,
-    rgba(0, 0, 0, 0.58) 88%,
-    transparent 100%
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.22) 14%,
+    rgba(0, 0, 0, 0.6) 28%,
+    rgba(0, 0, 0, 1) 42%
   );
-}
-
-.module-section {
-  padding-top: 76px;
-}
-
-.js .module-head {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition:
-    opacity 0.78s ease,
-    transform 0.78s ease;
+  transition: opacity 0.78s ease;
 }
 
 .module-section.is-head-visible .module-head {
